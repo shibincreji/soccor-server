@@ -1,7 +1,7 @@
 const { addNewPlayer } = require('../controllers/playerControllers');
 
 const routes = (app) => {
-    app.route('/player')
+    app.route('/players')
     //post endpoint
         .post(addNewPlayer);
 }
