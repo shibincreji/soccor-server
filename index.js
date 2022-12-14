@@ -4,10 +4,14 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const soccerRoutes = require("./routes/soccerRoutes");
+//import routes from "./routes/soccerRoutes";
+
+
 const app = express();
 const PORT = 3000;
 
-//mongoose connection
+//mongo connection
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
@@ -17,6 +21,11 @@ mongoose.connect(process.env.MONGODB_URI, {
 //bodyparser setup
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
+
+//routes(app);
+
+app.use(cors());
+app.use("/api", soccerRoutes);
 
 app.get('/', (req, res) => 
 res.send(`Our soccer application is running at ${PORT}` )

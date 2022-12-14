@@ -1,4 +1,4 @@
-import { addNewPlayer } from '../controllers/playerControllers';
+const { addNewPlayer } = require('../controllers/playerControllers');
 
 const routes = (app) => {
     app.route('/player')
@@ -6,4 +6,4 @@ const routes = (app) => {
         .post(addNewPlayer);
 }
 
-export default routes;
+module.exports = routes;

@@ -1,7 +1,8 @@
-import mongoose from "mongoose";
+var mongoose = require("mongoose");
 
-const Schema = mongoose.Schema;
-export const PlayerSchema = new Schema({
+//const Schema = mongoose.Schema;
+ var PlayerSchema = new mongoose.Schema(
+    {
     firstName: {
         type: String,
         required: true
@@ -54,3 +55,4 @@ export const PlayerSchema = new Schema({
 });
 
 
+module.exports = mongoose.model("Player", PlayerSchema);
