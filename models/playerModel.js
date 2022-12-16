@@ -1,13 +1,13 @@
-var mongoose = require("mongoose");
+import mongoose from 'mongoose';
 
-//const Schema = mongoose.Schema;
- var PlayerSchema = new mongoose.Schema(
-    {
+const Schema = mongoose.Schema;
+
+export const PlayerSchema = new Schema({
     firstName: {
         type: String,
         required: true
     },
-    LasttName: {
+    lastName: {
         type: String,
         required: true
     },
@@ -19,40 +19,39 @@ var mongoose = require("mongoose");
         type: Number
     },
     iscoach: {
-        type: String
+        type: Boolean,
+        default: false
     },
     team: {
-        type: Number
+        type: String
     },
     speed: {
         type: Number,
-        enum: [1,2,3]
+        enum: [1, 2, 3]
     },
     strength: {
         type: Number,
-        enum: [1,2,3]
+        enum: [1, 2, 3]
     },
     endurance: {
         type: Number,
-        enum: [1,2,3]
+        enum: [1, 2, 3]
     },
     ability: {
         type: Number,
-        enum: [1,2,3]
+        enum: [1, 2, 3]
     },
     techniques: {
         type: Number,
-        enum: [1,2,3]
+        enum: [1, 2, 3]
     },
     tactical: {
         type: Number,
-        enum: [1,2,3]
+        enum: [1, 2, 3]
     },
-    created_date:{
+    created_date: {
         type: Date,
         default: Date.now
     }
 });
 
-
-module.exports = mongoose.model("Player", PlayerSchema);
