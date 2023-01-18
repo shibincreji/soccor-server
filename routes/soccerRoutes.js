@@ -24,5 +24,5 @@ const routes = (app) => {
         // update a specific player
         .delete(deletePlayer);
 }
-
+1
 export default routes;111111
