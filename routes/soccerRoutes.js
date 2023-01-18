@@ -25,4 +25,4 @@ const routes = (app) => {
         .delete(deletePlayer);
 }
 1
-export default routes;111111
+export default routes;1111111
