@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';1
+import mongoose from 'mongoose';11
 import { PlayerSchema } from '../models/playerModel';
 
 const Player = mongoose.model('Player', PlayerSchema);
