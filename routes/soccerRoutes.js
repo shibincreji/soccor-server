@@ -1,4 +1,4 @@
-import { 2
+import { 22
     addNewPlayer, 
     getPlayers,
     getPlayerWithID,
