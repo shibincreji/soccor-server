@@ -1,5 +1,5 @@
 import { 
-    addNewPlayer, 11
+    addNewPlayer, 111
     getPlayers,
     getPlayerWithID,
     UpdatePlayer,
